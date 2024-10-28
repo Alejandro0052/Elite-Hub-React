@@ -48,8 +48,13 @@ function Register() {
             <input name="username" onChange={handleChange} placeholder="Usuario" />
             <input type="password" name="password" onChange={handleChange} placeholder="Contraseña" />
             <select name="userType" onChange={handleChange}>
+            <option value="Contenido">Contenido</option>
+                <option value="Marca">Marca</option>
                 <option value="Patrocinador">Patrocinador</option>
                 <option value="Deportista">Deportista</option>
+                <option value="PQRs">Pqrs</option>
+                <option value="Deporte">Deporte</option>
+                <option value="Nutricionista">Nutricionista</option>
             </select>
             <input type="file" onChange={handleFileChange} />
             <button type="submit">Registrar</button>
