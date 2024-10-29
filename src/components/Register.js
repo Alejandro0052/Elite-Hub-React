@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../axiosConfig'; // Asegúrate de la ruta correcta
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ function Register() {
         e.preventDefault();
         try {
             // Envía los datos del usuario para el registro
-            const response = await axios.post('http://localhost:8000/api/register/', formData);
+            const response = await axios.post('register/', formData);
             const userId = response.data.id;
 
             // Si se ha subido una imagen, envíala en una segunda solicitud
@@ -29,10 +29,9 @@ function Register() {
                 const formData = new FormData();
                 formData.append('image', profileImage);
 
-                await axios.post('http://localhost:8000/api/upload-image/', formData, {
+                await axios.post('upload-image/', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
-                        Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
                 });
             }
@@ -40,6 +39,7 @@ function Register() {
             alert('Registro exitoso');
         } catch (error) {
             console.error('Error en el registro:', error);
+            alert('Error en el registro: ' + error.response.data.detail || error.message);
         }
     };
 
@@ -48,7 +48,7 @@ function Register() {
             <input name="username" onChange={handleChange} placeholder="Usuario" />
             <input type="password" name="password" onChange={handleChange} placeholder="Contraseña" />
             <select name="userType" onChange={handleChange}>
-            <option value="Contenido">Contenido</option>
+                <option value="Contenido">Contenido</option>
                 <option value="Marca">Marca</option>
                 <option value="Patrocinador">Patrocinador</option>
                 <option value="Deportista">Deportista</option>
