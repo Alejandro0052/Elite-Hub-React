@@ -32,6 +32,7 @@ function UsuarioList() {
                 {usuarios.map((usuario, index) => (
                     <li key={index}>
                         Nombre: {usuario.first_name || 'No especificado'}, Apellido: {usuario.last_name}
+                        Imagen de Perfil: {usuario.imagen_de_perfil || 'Imagen No especificada'},
                         Dirección: {usuario.direccion || 'No especificada'}, Edad: {usuario.edad}
                     </li>
                 ))}
