@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from '../axiosConfig'; // Asegúrate de que esta ruta sea correcta
+import axios from '../axiosConfig'; 
 
 function UsuarioList() {
     const [usuarios, setUsuarios] = useState([]);
