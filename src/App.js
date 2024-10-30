@@ -15,10 +15,8 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} /> {/* Ruta para el registro */}
-                    {/* Envolvemos Dashboard en ProtectedRoute */}
-                    <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-                    <Route path="/usuarios" element={<UsuarioList />} /> {/* Ruta para mostrar la lista de usuarios */}
-                   
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/usuarios" element={<UsuarioList />} /> {/* Ruta para mostrar la lista de usuarios */}                 
                     <Route path="/nutricionistas" element={<NutricionistaList />} /> {/* Ruta para mostrar la lista de Nutricionistas */}
                 </Routes>
             </Router>
