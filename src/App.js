@@ -18,7 +18,8 @@ function App() {
                     {/* Envolvemos Dashboard en ProtectedRoute */}
                     <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                     <Route path="/usuarios" element={<UsuarioList />} /> {/* Ruta para mostrar la lista de usuarios */}
-                    <Route path="/nustricionistas" element={<ProtectedRoute><NutricionistaList /></ProtectedRoute>} /> {/* Cambiamos a NutricionistaList aquí */}
+                   
+                    <Route path="/nutricionistas" element={<NutricionistaList />} /> {/* Ruta para mostrar la lista de Nutricionistas */}
                 </Routes>
             </Router>
         </AuthProvider>
