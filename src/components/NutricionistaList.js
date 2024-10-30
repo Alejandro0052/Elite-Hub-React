@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from '../axiosConfig'; 
 
 function NutricionistaList() {
-    const [nutricionistas, setNutricionistas] = useState([]); // Cambiado a nutricionistas
+    const [nutricionistas, setNutricionistas] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
