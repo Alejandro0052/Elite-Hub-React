@@ -9,6 +9,7 @@ import NutricionistaList from './components/NutricionistaList';
 import DeportistaList from './components/DeportistaList'; 
 import PatrocinadorList from './components/PatrocinadorList';
 import MarcaList from './components/MarcaList';
+import PqrsList  from './components/PqrsList';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/deportistas" element={<DeportistaList/>}/> {/* Ruta para mostrar la lista de deportistas */}
                     <Route path="/patrocinadores" element={<PatrocinadorList/>} /> {/* Ruta para mostrar la lista de patrocinadores */}
                     <Route path="/marcas" element={<MarcaList/>} /> {/* Ruta para mostrar la lista de las marcas */}
+                    <Route path="/pqrs" element={<PqrsList/>} /> {/* Ruta para mostrar la lista de las pqrs */}
                 </Routes>
             </Router>
         </AuthProvider>
