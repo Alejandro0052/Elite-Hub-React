@@ -8,6 +8,8 @@ import Register from './components/Register';
 import NutricionistaList from './components/NutricionistaList'; 
 import DeportistaList from './components/DeportistaList'; 
 import PatrocinadorList from './components/PatrocinadorList';
+import MarcaList from './components/MarcaList';
+
 
 function App() {
     return (
@@ -21,11 +23,12 @@ function App() {
                     <Route path="/nutricionistas" element={<NutricionistaList/>} /> {/* Ruta para mostrar la lista de Nutricionistas */}
                     <Route path="/deportistas" element={<DeportistaList/>}/> {/* Ruta para mostrar la lista de deportistas */}
                     <Route path="/patrocinadores" element={<PatrocinadorList/>} /> {/* Ruta para mostrar la lista de patrocinadores */}
+                    <Route path="/marcas" element={<MarcaList/>} /> {/* Ruta para mostrar la lista de las marcas */}
                 </Routes>
             </Router>
         </AuthProvider>
     );
-}
+} 
 
 export default App; 
 
